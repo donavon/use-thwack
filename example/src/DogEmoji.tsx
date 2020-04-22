@@ -1,7 +1,10 @@
-import React from "react";
+import * as React from 'react';
 
-export const DogEmoji = () => (
-  <span role="img" aria-label="dog">
-    🐶
+export const Emoji = ({ label, children }) => (
+  <span role="img" aria-label={label}>
+    {children}
   </span>
 );
+
+export const DogEmoji = () => <Emoji label="dog">🐶</Emoji>;
+export const BoneEmoji = () => <Emoji label="bone">🦴</Emoji>;

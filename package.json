@@ -4,7 +4,7 @@
     "access": "public",
     "tag": "next"
   },
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "A React Hook for fetching with Thwack",
   "license": "MIT",
   "main": "dist/index.js",
@@ -40,7 +40,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "author": "Donavon West",
+  "author": "Donavon West <github@donavon.com> (https://github.com/donavon)",
   "devDependencies": {
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
@@ -52,6 +52,6 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "thwack": "^0.2.3"
+    "thwack": "^0.3.0"
   }
 }

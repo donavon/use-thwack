@@ -5,14 +5,16 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel index.html",
-    "build": "cd .. && yarn build && cd example && parcel build index.html"
+    "build": "parcel build index.html"
   },
   "dependencies": {
-    "react": "^16.13.1",
-    "react-app-polyfill": "^1.0.6",
-    "react-dom": "^16.13.1"
+    "react-app-polyfill": "^1.0.6"
   },
-  "alias": {},
+  "alias": {
+    "react": "../node_modules/react",
+    "react-dom": "../node_modules/react-dom",
+    "use-thwack": ".."
+  },
   "devDependencies": {
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",

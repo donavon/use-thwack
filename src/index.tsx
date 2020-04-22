@@ -1,5 +1,9 @@
 import { useEffect, useState, useCallback } from 'react';
-import thwack, { ThwackResponse, ThwackOptions, ThwackError } from 'thwack';
+import thwack, {
+  ThwackResponse,
+  ThwackOptions,
+  ThwackResponseError,
+} from 'thwack';
 
 export enum RequestStatus {
   Idle = 'idle',
@@ -12,7 +16,7 @@ export const useThwack = (initialUrl: string, options?: ThwackOptions) => {
   const [status, setStatus] = useState(
     initialUrl ? RequestStatus.Loading : RequestStatus.Idle
   );
-  const [error, setError] = useState<null | ThwackError>(null);
+  const [error, setError] = useState<null | ThwackResponseError>(null);
   const [thwackResponse, setThwackResponse] = useState<null | ThwackResponse>(
     null
   );
@@ -23,10 +27,16 @@ export const useThwack = (initialUrl: string, options?: ThwackOptions) => {
     try {
       const response = await thwack(url, options);
 
+      // thwack.addEventListener('request', (event) => {
+      //   const {options} = event;
+      //   const newOptions: ThwackOptions = {...options, headers: {'foo': 'bar'}};
+      //   return newOptions;
+      // });
+
       setThwackResponse(response);
       setStatus(RequestStatus.Success);
     } catch (ex) {
-      if (!(ex as ThwackError)) {
+      if (!(ex as ThwackResponseError)) {
         throw ex;
       }
       setError(ex);

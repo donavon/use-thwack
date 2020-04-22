@@ -1,7 +1,7 @@
-import * as React from "react";
-import "./styles.css";
-import { useRandomDog, RequestStatus } from "./useRandomDog";
-import { DogEmoji } from "./DogEmoji";
+import * as React from 'react';
+import './styles.css';
+import { useRandomDog, RequestStatus } from './useRandomDog';
+import { DogEmoji, BoneEmoji } from './DogEmoji';
 
 export default function App() {
   const { imageUrl, load, status, error } = useRandomDog();
@@ -10,7 +10,7 @@ export default function App() {
     console.log(error);
     return (
       <>
-        <h1>Error fetching dog</h1>
+        <h1>Error fetching dog. I'm a Sad Puppy.</h1>
         <div>
           <button onClick={load}>Try Again</button>
         </div>
@@ -29,7 +29,7 @@ export default function App() {
       </h2>
       <div>
         <button disabled={status === RequestStatus.Loading} onClick={load}>
-          Fetch a New Dog
+          <BoneEmoji /> Fetch a New Dog
         </button>
       </div>
       {imageUrl && <img src={imageUrl} alt="dog" />}

@@ -1,6 +1,7 @@
-import { useThwack } from '../..';
+import * as Thwack from 'use-thwack';
+const { useThwack } = Thwack;
 
-export { RequestStatus } from '../..';
+export { RequestStatus } from 'use-thwack';
 
 const apiUrl = 'https://dog.ceo/api/breeds/image/random';
 
