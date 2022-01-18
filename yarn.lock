@@ -993,6 +993,11 @@
     estree-walker "^1.0.1"
     micromatch "^4.0.2"
 
+"@thwack/resolve@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@thwack/resolve/-/resolve-1.0.0.tgz#e55ebf7b439abdb24e0e2646ef2343757c3104c7"
+  integrity sha512-vKG4Lks53MKNZU5AFLApVMEfkjQBKy4dFnMzZ0fB6o86EVjR24wmWdU4t8AjIWowJXsS9wW7Qe12h2/qx3xcOA==
+
 "@types/babel__core@^7.1.0":
   version "7.1.7"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.7.tgz#1dacad8840364a57c98d0dd4855c6dd3752c6b89"
@@ -4109,10 +4114,12 @@ no-case@^2.2.0:
   dependencies:
     lower-case "^1.1.1"
 
-node-fetch@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
-  integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
+node-fetch@^2.6.1:
+  version "2.6.7"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
+  integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
+  dependencies:
+    whatwg-url "^5.0.0"
 
 node-int64@^0.4.0:
   version "0.4.0"
@@ -5553,13 +5560,14 @@ through@^2.3.6:
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
   integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
 
-thwack@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/thwack/-/thwack-0.3.0.tgz#f076c1b8fea6c6c3400d7c7a642278785ef87cc9"
-  integrity sha512-VcV2HzP6WA76IA4YFV0z0fyRolbgaMJMaDj1srGYZLxXP+D4bhmeF+D/6X9dKwdDM0B21BGXR+qWDOPXfaN7WA==
+thwack@^0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/thwack/-/thwack-0.6.2.tgz#bd0542a9c74d51c5cce0d47df4efb655fac10a0b"
+  integrity sha512-6yCf21Zb0NV4ayN/A7z4IsEqINJXn6INj7bEvZQsRWQacWSp47raMQKaQiNu3ttTmMqN/P/qjY3j24xbYg30qA==
   dependencies:
+    "@thwack/resolve" "^1.0.0"
     core-js "^3.6.5"
-    node-fetch "^2.6.0"
+    node-fetch "^2.6.1"
 
 tiny-glob@^0.2.6:
   version "0.2.6"
@@ -5637,6 +5645,11 @@ tr46@^1.0.1:
   integrity sha1-qLE/1r/SSJUZZ0zN5VujaTtwbQk=
   dependencies:
     punycode "^2.1.0"
+
+tr46@~0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
+  integrity sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o=
 
 ts-jest@^24.0.2:
   version "24.3.0"
@@ -5905,6 +5918,11 @@ wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
+webidl-conversions@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-3.0.1.tgz#24534275e2a7bc6be7bc86611cc16ae0a5654871"
+  integrity sha1-JFNCdeKnvGvnvIZhHMFq4KVlSHE=
+
 webidl-conversions@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-4.0.2.tgz#a855980b1f0b6b359ba1d5d9fb39ae941faa63ad"
@@ -5921,6 +5939,14 @@ whatwg-mimetype@^2.1.0, whatwg-mimetype@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/whatwg-mimetype/-/whatwg-mimetype-2.3.0.tgz#3d4b1e0312d2079879f826aff18dbeeca5960fbf"
   integrity sha512-M4yMwr6mAnQz76TbJm914+gPpB/nCwvZbJU28cUD6dR004SAxDLOOSUaB1JDRqLtaOV/vi0IC5lEAGFgrjGv/g==
+
+whatwg-url@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-5.0.0.tgz#966454e8765462e37644d3626f6742ce8b70965d"
+  integrity sha1-lmRU6HZUYuN2RNNib2dCzotwll0=
+  dependencies:
+    tr46 "~0.0.3"
+    webidl-conversions "^3.0.0"
 
 whatwg-url@^6.4.1:
   version "6.5.0"
